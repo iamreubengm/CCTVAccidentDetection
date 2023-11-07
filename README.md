@@ -44,11 +44,9 @@ After we detect a possible accident using the collision detection algorithm, we 
 ![DenseNet-201](assets/dense.png)  
 <p align="center">Working of Densenet-201</p>  
   
-Feature extraction being performed by the Densenet-201 model produces a **feature vector of shape (1,1920)** which on flattening gives a vector of **(1920,)**. Each image is resized to **224x224x3 pixels** which is then resized to **(1,224,224,3)** which is the input format required by Densenet-201.  
+Feature extraction being performed by the Densenet-201 model produces a **feature vector of shape (1,1920)** which on flattening gives a vector of **(1920,)**. Each image is resized to **224x224x3 pixels** which is then resized to **(1,224,224,3)** which is the input format required by Densenet-201. 
   
-<p align="center">
-  ![DenseNet-201 Architecture](assets/dense_arch.png)  
-</p>    
+![DenseNet-201 Architecture](assets/dense_arch.png)     
 <p align="center">Densenet-201 Architecture</p>  
   
 After the extraction of features, these features are then fed to an **Artificial Neural Network** which then handles the task of accident classification. The output of the Densenet-201 model produces a vector of length 1920 which basically contains the required features of the input image.This (1920,1) dimension vector is fed to a Neural Network with an input layer of 16 neurons, followed by two hidden layers of 32 and 16 neurons each and a final output layer.  
@@ -62,23 +60,21 @@ Between each layer, there exists a dropout layer to prevent over-fitting, a Rect
 The dataset contains 5000 images divided into two classes: Accidents and Non-Accidents.   
   
 The **Accident** class is made up of **2500 images of various types and angles of accidents**. This data was extracted from CCTV Video footage uploaded to Youtube along with Google image results. We experimented with simulated footage using Beam.NG, an extremely detailed and authentic vehicle simulation software. However, we felt that the simulated footage was **not photo-realistic enough** and did not complement the existing dataset well, so we chose to not use it. We also manually cleaned the Accident class, and removed images that did not belong to the class or was not good enough to be a part of the dataset.  
-<p align="center">  
-  ![Accident 1](assets/acc1.jpg)  
+  
+![Accident 1](assets/acc1.jpg)  
+     
+![Accident 2](assets/acc2.jpg) 
     
-  ![Accident 2](assets/acc2.jpg) 
-    
-  ![Accident 3](assets/acc3.jpg)
-</p>
+![Accident 3](assets/acc3.jpg)  
   
 The **Non-Accident** class is also made up of **2500 images**, and mainly consists of various situations where vehicles are close to each other, and might appear to collide but are not. This class is crucial as it helps the model differentiate between cases where vehicles have actually collided and cases where the vehicles are close to each other but have not collided. This class ensures that the false positive alerts raised are kept in check.  
-<p align="center">
-  ![Not Accident 1](assets/noacc1.jpg) 
+  
+![Not Accident 1](assets/noacc1.jpg) 
     
-  ![Not Accident 2](assets/noacc2.jpg) 
-    
-  ![Not Accident 3](assets/noacc3.jpg)  
-</p>
-
+![Not Accident 2](assets/noacc2.jpg) 
+     
+![Not Accident 3](assets/noacc3.jpg)  
+  
 ### Testing  
 For the end-to-end testing process, we utilized a **test video set of 10 videos**, captured in **varied conditions**. These videos were not included in the training dataset, to ensure the most accurate testing scenarios.  
   
@@ -116,15 +112,13 @@ When coming to the ANN that was used for classification, it consists of 3 hidden
 ### Results  
 We evaluated the data against 20% of the original dataset as evaluation data and the results are as shown in the table.  
 
-<p align="center">  
 | CNN Architecture | F1-Score (N) |
 |------------------|--------------|
 | Resnet-50        | 0.95         |
 | Densenet-201     | 0.97         |
 | Inception-v3     | 0.94         |
 | VGG16            | 0.93         |
-|------------------|--------------|  
-</p>  
+|------------------|--------------|   
   
 From the results we see that the Densenet-201 architecture performs significantly better than the other CNNs for feature extraction, in the case of the end to end system, we trained the model on all of the images from our dataset and tested it on videos of accidents.  
 <p align="center">
