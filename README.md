@@ -118,16 +118,14 @@ We evaluated the data against 20% of the original dataset as evaluation data and
 | Densenet-201     | 0.97         |
 | Inception-v3     | 0.94         |
 | VGG16            | 0.93         |
-|------------------|--------------|   
   
 From the results we see that the Densenet-201 architecture performs significantly better than the other CNNs for feature extraction, in the case of the end to end system, we trained the model on all of the images from our dataset and tested it on videos of accidents.  
-<p align="center">
+  
 ![Accuracy](assets/acc.png)  
 <p align="center">Train vs Test Accuracy</p>  
 
 ![Loss](assets/loss.png)  
 <p align="center">Train vs Test Loss</p>  
-</p>
   
 ### Instructions to run
 
