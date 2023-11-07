@@ -3,7 +3,7 @@
 ### Introduction
 Every year, road accidents claim the lives of **1.3 million** people, with over **50 million** people suffering injuries that are non fatal. The repercussions of these accidents extend far beyond the loss of lives, costing most countries upto **3% of their Gross Domestic Product**.  
 
-One of the reasons for the high fatalities of these accidents is the **lack of timely medical attention** given to the victims. The total time taken for this first aid to reach the victim can be divided into two segments, T1 and T2. 
+One of the reasons for the high fatalities of these accidents is the **lack of timely medical attention** given to the victims. The total time taken for this first aid to reach the victim can be divided into two segments, T1 and T2.  
   
 ![Time Breakdown](assets/Time.png)  
 <p align="center">Time Breakdown</p>   
