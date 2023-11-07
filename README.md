@@ -127,7 +127,16 @@ From the results we see that the Densenet-201 architecture performs significantl
 
 ![Loss](assets/loss.png)  
 <p align="center">Train vs Test Loss</p>  
-  
+
+### Demos
+[![Demo 1](https://img.youtube.com/vi/yJ5OtH49dNw/0.jpg)](https://www.youtube.com/watch?v=yJ5OtH49dNw)  
+
+[![Demo 1](https://img.youtube.com/vi/h5GgwoW0-L0/0.jpg)](https://www.youtube.com/watch?v=h5GgwoW0-L0)  
+
+[![Demo 1](https://img.youtube.com/vi/zRya30-7dGg/0.jpg)](https://www.youtube.com/watch?v=zRya30-7dGg)  
+
+[![Demo 1](https://img.youtube.com/vi/35X4M3ILkiQ/0.jpg)](https://www.youtube.com/watch?v=35X4M3ILkiQ)  
+    
 ### Instructions to run
 
 *Tested On Linux Only*
