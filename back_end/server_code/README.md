@@ -791,7 +791,7 @@ public:
 ```
 @InProceedings{Wang_2021_CVPR,
     author    = {Wang, Chien-Yao and Bochkovskiy, Alexey and Liao, Hong-Yuan Mark},
-    title     = {{Scaled-YOLOv4}: Scaling Cross Stage Partial Network},
+    title     = {Scaled-YOLOv4: Scaling Cross Stage Partial Network},
     booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
     month     = {June},
     year      = {2021},
